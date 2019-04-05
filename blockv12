@@ -1,0 +1,57 @@
+#include <kipr/botball.h>
+
+int main()
+{
+    //starting code
+   // wait_for_light(0);
+   // shut_down_in(119);
+    //end of starting code
+    enable_servos();
+    set_servo_position(3,100);    
+    disable_servos();    
+    create_connect();
+   //MOVING BACKWARDS to utility zone
+    create_drive_direct(-95,-100);
+    msleep(5700);
+    //turning cw
+    create_drive_direct(100,-100);
+    msleep(1400);    
+   //move to mid board
+    create_drive_direct(95,100);    
+    msleep(4000);    
+    //turn ccw 
+    create_drive_direct(-100,100);
+    msleep(1300);    
+    create_drive_direct(95,100); 
+    msleep(5500);
+    create_drive_direct(-100,100);
+    msleep(1500);
+    create_drive_direct(94,100);
+     msleep(1500);
+   //move back
+   create_drive_direct(-94,-100);
+     msleep(1500); 
+     //turning cw
+    create_drive_direct(100,-100);
+    //MOVING BACKWARDS to utility zone
+    create_drive_direct(-95,-100);
+    msleep(5700);
+    //turning cw
+    create_drive_direct(100,-100);
+    msleep(1400);    
+   //move to mid board
+    create_drive_direct(95,100);    
+    msleep(4000);    
+    //turn ccw 
+    create_drive_direct(-100,100);
+    msleep(1300);    
+    create_drive_direct(95,100); 
+    msleep(5500);
+    create_drive_direct(-100,100);
+    msleep(1500);
+    create_drive_direct(94,100);
+     msleep(1500);
+     create_drive_direct(94,100);
+     msleep(1500);   
+    return 0;
+}
